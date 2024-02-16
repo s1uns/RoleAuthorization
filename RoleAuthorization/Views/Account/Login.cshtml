@@ -1,0 +1,24 @@
+﻿@model RoleAuthorization.Models.LoginModel
+
+<h2>Login</h2>
+
+<a asp-action="Register" asp-controller="Account">Registration</a>
+
+<form asp-action="Login" asp-controller="Account" asp-anti-forgery="true">
+    <div class="validation" asp-validation-summary="ModelOnly"></div>
+    <div>
+        <div class="form-group">
+            <label asp-for="Email">Enter your email</label>
+            <input type="text" asp-for="Email" />
+            <span asp-validation-for="Email" />
+        </div>
+        <div class="form-group">
+            <label asp-for="Password">Enter your password</label>
+            <input asp-for="Password" />
+            <span asp-validation-for="Password" />
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Login" class="btn" />
+        </div>
+    </div>
+</form>
